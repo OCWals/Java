@@ -1,0 +1,5 @@
+package fr.OC.classes;
+
+public class A {
+	public B b = new B();
+}

@@ -1,0 +1,33 @@
+
+public class main {
+	
+	public static void println(String x) {
+		System.out.println(x);
+	}
+	
+	public static void print(String x) {
+		System.out.print(x);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Ville Grenoble = null;
+		Ville NegCity = null;
+		
+		try {
+			Grenoble = new Ville("Grenoble", "France", 700000);
+		} catch (Exception e) {
+		}
+		
+		println(Grenoble.toString() + '\n');
+
+		try {
+			NegCity = new Ville("Negatif City", "Nul-part", -1);
+		} catch (Exception e) {
+			println("ntm");
+		}
+		
+	
+	}
+}

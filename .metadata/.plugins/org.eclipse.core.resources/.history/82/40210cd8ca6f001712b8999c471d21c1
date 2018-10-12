@@ -1,0 +1,58 @@
+import java.util.*;					// importe toutes les classes contenues dans java.util
+
+public class mainCollection {
+	public static void main (String[] args) {
+		System.out.println("Test okay\n");
+		
+		List list01 = new LinkedList();
+
+		list01.add("Debut.");
+		list01.add(12);
+		list01.add("Toto !");
+		list01.add(12.20f);
+		list01.add(null);
+		list01.add("Fin.");
+		
+		for (int i=0; i<list01.size(); i++) {				// utiliser size() et non length()
+			int j = i + 1;
+			System.out.println("Element contenu dans l'index n°" + j + " : " + list01.get(i));
+		}
+		
+		System.out.print('\n');
+		
+		ListIterator li = list01.listIterator();
+		
+		System.out.println(list01.get(list01.size()-1));
+		
+		System.out.print("\n");
+		
+		int i = 0;
+		while (li.hasNext()) {
+			System.out.println(i + " : " + li.next());
+			i = i+1;
+		}
+		
+		System.out.println("\n*-------------------------------------------------------*\n");
+		
+		/* L'objet ArrayList fonctionne exactement de la même manière à la différence qu'il est plus rapide en lecture et ce même pour un gros volume de données
+		Privilegier le LinkedList lorsqu'il faut ajouter ou supr des données en millieu de liste. */
+	
+		
+		Hashtable ht = new Hashtable();
+		
+		ht.put(1, "Printemps");
+		ht.put(3, "Eté");
+		ht.put(7, "Automne");
+		ht.put(9, "Hiver");
+		
+		Enumeration e = ht.elements();
+		
+		while(e.hasMoreElements()) {
+			System.out.println(e.nextElement());
+		}
+		
+		System.out.println(ht.containsValue("Hiver"));
+		
+		
+	}
+}

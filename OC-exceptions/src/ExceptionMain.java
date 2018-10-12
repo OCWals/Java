@@ -1,0 +1,24 @@
+public class ExceptionMain {
+	public static void main(String[] args) {
+		
+		int j = 20;
+		int i = 0;
+		try {
+			System.out.println(j/i);
+		} catch (Exception e) {
+			System.out.println("Division par zero impossible (" + e.getMessage() + ").");
+		}
+		
+		System.out.println("Texte post division par zero.\n");
+		
+		try {
+		    System.out.println(" =>" + (1/0));
+		} catch (Exception e) {
+			System.out.println("Division par zero impossible (" + e.getMessage() + ").");			
+		    e.printStackTrace();
+		}
+		finally{
+		    System.out.println("Action faite systématiquement");
+		}
+	}
+}

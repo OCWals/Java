@@ -1,0 +1,29 @@
+
+public class AvantEnumeration {
+	public static final int PARAM1 = 1;
+	public static final int PARAM2 = 2;
+	
+	public void fait(int param) {
+		if (param== PARAM1) {
+			System.out.println("Fait à la façon n°1.");
+		} else if (param == PARAM2) {
+			System.out.println("Fait à la façon n°2.");
+		}
+	}
+	
+	public static void main(String argus[]) {
+		AvantEnumeration ae = new AvantEnumeration();
+		ae.fait(AvantEnumeration.PARAM1);
+		ae.fait(AvantEnumeration.PARAM2);
+		ae.fait(777);
+		
+		
+		for(Langage lang : Langage.values()) {
+			if (Langage.JAVA.equals(lang)) {
+				System.out.println("J'aime le : *" + lang);
+			} else {
+				System.out.println(lang);
+			}
+		}
+	}
+}

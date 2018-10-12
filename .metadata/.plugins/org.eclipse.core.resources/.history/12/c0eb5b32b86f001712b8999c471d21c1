@@ -1,0 +1,9 @@
+import java.util.*; // importe toutes les classes contenues dans java.util
+
+public class mainCollection {
+	public static void main (String[] args) {
+		System.out.println("Test okay\n");
+		
+		
+	}
+}

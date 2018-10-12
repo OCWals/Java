@@ -1,0 +1,55 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		System.out.println("Nombre d'instances de la classe Ville : " + Ville.getNbInstances());
+		Ville city = new Ville();
+		System.out.println("Nombre d'instances de la classe Ville : " + Ville.getNbInstances());
+		Ville city2 = new Ville("Grenoble", "France", 700000);
+		System.out.println("Nombre d'instances de la classe Ville : " + Ville.getNbInstances() + "\n");
+		
+		
+		/* Les variables de classes étant "private", je n'ai pas accès à ces denrieres directement dans le main :
+		System.out.println("\nnomVille city2 : " + city2.nomVille);
+		city2.nomVille = "Marseille";
+		System.out.println("Nouveau nomVille city2 : " + city2.nomVille); */
+	
+		
+		print("Nom de ville city 1 : "); println(city.getNom());
+		print("Nom de ville city 2 : "); println(city2.getNom()); print("\n");
+		
+		city.setNom("Marseille");
+		print("Nouveau nom de ville city 1 : "); println(city.getNom());
+		
+		print("Catégorie de city 2 : ");
+		System.out.println(city2.getCategorie());
+		
+		city.comparerHab(city2);
+
+		print(city.description());
+		print(city2.description());
+		
+		println("");
+		Capitale cap1 = new Capitale("Paris", "France", 12000000, "Tour Eiffel");
+		println(cap1.description() + "\n");
+		
+		println(cap1.toString());					// La méthode toString apparient à la classe Object de Java
+		println(city.toString());					// Elle a été polymorphée dans la classe mère Ville est ainsi aussi disponible dans sa classe fille Capitale
+		System.out.println(city2);					// Java appelle la méthode toString lorsqu'on fait un simple print sur un objet
+		
+		
+		
+		
+	}
+	
+	public static void println(String x) {
+		System.out.println(x);
+	}
+	
+	public static void print(String x) {
+		System.out.print(x);
+	}
+}

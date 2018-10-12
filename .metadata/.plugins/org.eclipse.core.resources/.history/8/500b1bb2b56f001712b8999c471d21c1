@@ -1,0 +1,20 @@
+
+public enum Langage {
+	JAVA ("Lanage JAVA"),
+	C ("Langage C"),
+	CPlus ("Langage C++"),
+	PHP ("Langage PHP");
+	
+	private String name = ""; 
+	
+	// CONSTRUCTEURS :
+	Langage(String name) {
+		this.name = name;
+	}
+	
+	public String toString() {
+		return name;
+	}
+	
+	/* Chacun de ses langage est en fait un "objet" de la classe java.lang.Object sur lesquels on peu par exemple utiliser toString() */
+}

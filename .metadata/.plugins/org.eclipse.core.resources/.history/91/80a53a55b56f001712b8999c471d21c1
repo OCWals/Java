@@ -1,0 +1,11 @@
+
+public enum Langage {
+	JAVA,
+	C,
+	Cplus,
+	PHP,
+	HTML5,
+	CSS3;
+	
+	// Chacun de ses langage est en fait un "objet" de la classe java.lang.Object sur lesquels on peu par exemple utiliser toString()
+}

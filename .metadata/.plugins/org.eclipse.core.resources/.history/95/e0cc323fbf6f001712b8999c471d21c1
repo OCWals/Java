@@ -1,0 +1,31 @@
+import java.util.*; // importe toutes les classes contenues dans java.util
+
+public class mainCollection {
+	public static void main (String[] args) {
+		System.out.println("Test okay\n");
+		
+		List list01 = new LinkedList();
+
+		list01.add("Debut.");
+		list01.add(12);
+		list01.add("Toto !");
+		list01.add(12.20f);
+		list01.add("Fin.");
+		
+		for (int i=0; i<list01.size(); i++) {				// utiliser size() et non length()
+			int j = i + 1;
+			System.out.println("Element contenu dans l'index n°" + j + " : " + list01.get(i));
+		}
+		
+		System.out.print('\n');
+		
+		ListIterator li = list01.listIterator();
+		
+		System.out.println(list01.get(list01.size()-1));
+		System.out.print("\n");
+		
+		while (li.hasNext()) {
+			System.out.println(li.next());
+		}
+	}
+}
